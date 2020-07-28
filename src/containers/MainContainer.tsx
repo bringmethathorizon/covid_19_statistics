@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../components/CountriesDropdown';
+import Dropdown from '../components/Dropdown/CountriesDropdown';
 import '../styles/BackgroundStyles.css';
 import {Country} from '../hooks/Country'
 import {ListOfCountries} from '../hooks/ListOfCountries';
