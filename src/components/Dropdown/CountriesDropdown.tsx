@@ -1,15 +1,11 @@
 import React, {useState} from 'react';
-import './DropdownStyles.css';
+import './styles.css';
 import strokeIcon from '../../icons/strokeIcon.png';
-// import '../styles/IconStyles.css'
-// import '../styles/TextStyles.css'
-// import '../styles/ListStyles.css';
 import {useSelector} from "react-redux";
 import {StateInterface} from "../../interfaces/StateInterface";
 import {CountryInterface} from "../../interfaces/CountryInterface";
 
 interface dropdownProps {
-    // title: string,
     setCountry(country: string): void;
     countries: CountryInterface[];
 }
@@ -21,15 +17,13 @@ export default function CountriesDropdown(props: dropdownProps){
 
     const toggleDropdown = () => {
         setOpen(!open);
-        // dispatch(actions.fetchCountries());
-
     };
 
     const country = useSelector((state: { covid: StateInterface }) => {
         return state.covid.country;
     });
 
-    const onOptionClicked = (country: string) => () => {
+    const handleSelect = (country: string) => () => {
         props.setCountry(country);
         setOpen(false);
         console.log('Country is', country);
@@ -47,12 +41,12 @@ export default function CountriesDropdown(props: dropdownProps){
                 <img className="stroke"
                      src={strokeIcon}
                      onClick={toggleDropdown}/>
-
             </div>
+
             {open && (
                 <div className="country-dropdown-list">
                     {props.countries.map((country, i) =>
-                        <div key={i} className="country-dropdown-item" onClick={onOptionClicked(country.Slug)}>
+                        <div key={i} className="country-dropdown-item" onClick={handleSelect(country.Slug)}>
                             {country.Country}
                         </div>)
                     }
