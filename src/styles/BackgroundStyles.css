@@ -1,6 +1,8 @@
 .Background {
     background-color: #EDF7FF;
     position: absolute;
-    width: 1440px;
-    height: 788px;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
 }

@@ -1,8 +1,10 @@
 .Stroke {
-    position: absolute;
+    /*position: absolute;*/
     width: 13px;
     height: 8px;
-    left: 320px;
-    top: 27px;
+    margin-top: 27px;
+    margin-right: 10px;
+    /*left: 320px;*/
+    /*top: 27px;*/
 
 }

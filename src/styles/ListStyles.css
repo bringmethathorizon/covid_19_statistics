@@ -1,0 +1,16 @@
+.List {
+    /*position: absolute;*/
+    width: 360px;
+    height: 61px;
+    /*margin-left: 120px;*/
+    /*margin-top: 120px;*/
+    /*margin-top: 0px;*/
+
+    background: #FFFFFF;
+    /*border-radius: 5px;*/
+
+}
+
+.ListContainer {
+    margin-top: 61px;
+}

@@ -5,6 +5,7 @@ import store from './store/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import MainContainer from './containers/MainContainer';
 import './App.css';
+import Backgound from './components/Background';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Provider store={store.store}>
                 <PersistGate loading={null} persistor={store.persistedStore}>
                    <MainContainer/>
+                   {/*<Backgound/>*/}
                 </PersistGate>
             </Provider>
         </>
